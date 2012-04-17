@@ -1,0 +1,4 @@
+({
+    baseUrl: "../js/",
+    optimize: 'none'
+})

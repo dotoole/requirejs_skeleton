@@ -1,8 +1,8 @@
 /*jslint browser: true, sloppy: true, nomen: true, maxerr: 50, indent: 4 */
 /*global define,require*/
 
-require.config({
-    packages: ['component1', 'component2', 'component3'],
+/* packages: ['component1', 'component2', 'component3'], */
+require.config({  
     paths: {
         jquery: 'lib/jquery/jquery-1.7.2',
         jqueryui: 'lib/jquery/jquery-ui-1.8.18.custom.min',
