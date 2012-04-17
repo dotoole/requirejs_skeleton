@@ -2,7 +2,7 @@
 /*global define,require*/
 
 require.config({
-    baseUrl: "./",
+    baseUrl: "js",
     paths: {
         jquery: 'lib/jquery/jquery-1.7.2',
         jqueryui: 'lib/jquery/jquery-ui-1.8.18.custom.min',
@@ -12,6 +12,6 @@ require.config({
     }
 });
 
-require([], function () {
-    console.log(window.history);
+require(['jquery'], function ($) {
+    $('#content').html('Component 2 Module');
 });

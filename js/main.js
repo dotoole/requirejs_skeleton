@@ -2,7 +2,8 @@
 /*global define,require*/
 
 require.config({
-    baseUrl: "js",
+    baseUrl: 'js',
+    packages: ['component1', 'component2', 'component3'],
     paths: {
         jquery: 'lib/jquery/jquery-1.7.2',
         jqueryui: 'lib/jquery/jquery-ui-1.8.18.custom.min',
@@ -13,10 +14,5 @@ require.config({
 });
 
 require(['jquery'], function ($) {
-    console.log(window.history);
-    /*
-    $('#comp1').on('click', function() { alert('comp1'); });
-    $('#comp2').on('click', function() { alert('comp2'); });
-    $('#comp3').on('click', function() { alert('comp3'); });
-    */
+    $('#content').html('Main Application Module');
 });

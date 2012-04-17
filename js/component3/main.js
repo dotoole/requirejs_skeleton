@@ -13,5 +13,5 @@ require.config({
 });
 
 require(['jquery'], function ($) {
-    $('#content').html('Component 1 Module');
+    $('#content').html('Component 3 Module');
 });
