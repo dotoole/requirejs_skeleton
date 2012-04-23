@@ -3,15 +3,25 @@
 
 
 require.config({
-    packages: ['component1', 'component2', 'component3'],
     paths: {
         jquery: 'lib/jquery/jquery-1.7.2',
         jqueryui: 'lib/jquery/jquery-ui-1.8.18.custom.min',
         backbone: 'lib/backbone/backbone',
-        underscore: 'lib/underscore/underscore'
+        underscore: 'lib/underscore/underscore',
+        use: 'lib/requirejs/use'  //Shims https://github.com/derickbailey/backbone.marionette/issues/29
+    },
+    use: {
+        backbone: {
+            deps: ['use!underscore', 'jquery'],
+            attach: function (_, $) { return Backbone; }
+        },
+        underscore: { attach: '_' }
     }
+
+
 });
 
-require(['jquery'], function ($) {
-    $('#content').html('Main Application Module');
+require(['book/view'], function (BookView) {
+    var bookView = new BookView();
+    bookView.render();
 });
