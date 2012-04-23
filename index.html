@@ -25,17 +25,16 @@
         <div id="content"></div>
 
         <hr>
-
-        <footer>
-            <p>Footer Stuff</p>
-        </footer>
-
     </div>
+
+    <footer>
+        <p>Footer Stuff</p>
+    </footer>
 
     <script id="bookTemplate" type="text/x-handlebars-template">
         <div class="span4">
-            <h2>Book: {name}</h2>
-            <p>{description}</p>
+            <h2>Book: <%= name %></h2>
+            <p><%= description %></p>
         </div>
     </script>
 
