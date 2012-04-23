@@ -5,7 +5,7 @@ define(['jquery', 'use!underscore', 'use!backbone', 'book/model', 'jqueryui'], f
     var BookView = Backbone.View.extend({
         el: '#content',
 
-        events: {'h2' : 'flash'},
+        events: {'click h2' : 'flash'},
 
         template: _.template($('#bookTemplate').html()),
 
@@ -19,7 +19,7 @@ define(['jquery', 'use!underscore', 'use!backbone', 'book/model', 'jqueryui'], f
         },
 
         flash: function (event) {
-
+            this.$('h2').effect('pulsate');
         }
     });
 
