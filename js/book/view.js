@@ -1,7 +1,7 @@
 /*jslint browser: true, sloppy: true, nomen: true, maxerr: 50, indent: 4 */
 /*global define,require*/
 
-define(['jquery', 'use!underscore', 'use!backbone', 'book/model', 'jqueryui'], function ($, _, Backbone, BookModel) {
+define(['jquery', 'use!underscore', 'use!backbone', 'book/model', 'jqueryui'], function ($, _, Backbone, myBook) {
     var BookView = Backbone.View.extend({
         el: '#content',
 
@@ -10,7 +10,7 @@ define(['jquery', 'use!underscore', 'use!backbone', 'book/model', 'jqueryui'], f
         template: _.template($('#bookTemplate').html()),
 
         initialize: function () {
-            this.model = new BookModel({name: 'The Da Vinci Code', description: 'A bit rubbish'});
+            this.model = myBook;
         },
 
         render: function () {

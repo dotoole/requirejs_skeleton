@@ -2,8 +2,7 @@
 /*global define,require*/
 
 define(['use!backbone'], function (Backbone) {
-    var BookModel = Backbone.Model.extend({
-    });
-
-    return BookModel;
+    var BookModel = Backbone.Model.extend({}),
+        myBook = new BookModel({name: 'The Da Vinci Code', description: 'A bit rubbish'});
+    return myBook;
 });
